@@ -1,10 +1,5 @@
 # dotfiles
 
-Dotfiles for my Macbook Pro 15,1 running macOS Catalina 10.15.
-
-![zsh with starship prompt and colorls](https://user-images.githubusercontent.com/15176096/71632895-ff0d0980-2bde-11ea-966f-65e5d564361f.png)
-![vim and tmux](https://user-images.githubusercontent.com/15176096/71633424-2f09dc00-2be2-11ea-9c15-a4f492b7ea68.png)
-
 -   Terminal: [Alacritty](https://github.com/jwilm/alacritty) using zsh w/ [starship prompt](https://starship.rs/) and [color-ls](https://github.com/athityakumar/colorls)
 -   Window management: [yabai](https://github.com/koekeishiya/yabai)
 -   Hotkeys: [skhd](https://github.com/koekeishiya/skhd)
@@ -40,7 +35,6 @@ This expands to [run.sh](https://github.com/gretzky/dotfiles/blob/master/run.sh)
     -   `.aliases`
     -   `.exports`
 -   `Brewfile` (contains all homebrew packages, casks, and mac appstore apps)
--   VSCode settings
 
 The install script will also setup a better Python environment with [pyenv](https://github.com/pyenv/pyenv) and set the global Python version to 3.7 instead of 2 (macOS default).
 
@@ -53,6 +47,4 @@ The install script will also setup a better Python environment with [pyenv](http
 
 ## Acknowledgements
 
--   [huyvohcmc/dotfiles](https://github.com/huyvohcmc/dotfiles)
--   [alrra/dotfiles](https://github.com/alrra/dotfiles)
--   [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+-   [gretzky/dotfiles](https://github.com/gretzky/dotfiles)
