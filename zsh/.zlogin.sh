@@ -6,4 +6,6 @@
   if [[ "$zcompdump" -nt "${zcompdump}.zwc" || ! -s "${zcompdump}.zwc" ]]; then
     zcompile "$zomcompdump"
   fi
+
+  unsetopt BG_NICE
 }

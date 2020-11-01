@@ -65,6 +65,9 @@ main() {
     printf "🌈  Installing colorls\n"
     sudo gem install colorls >/dev/null
 
+    printf "🌹 Installing nvm\n"
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+
     printf "👽  Installing vim-plug\n"
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

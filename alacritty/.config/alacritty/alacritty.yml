@@ -20,6 +20,9 @@ window:
     #    columns: 80
     #    lines: 24
 
+    dynamic_title: true
+
+
     # Adds this many blank pixels of padding around the window
     # Units are physical pixels; this is not DPI aware.
     # (change requires restart)
@@ -48,7 +51,7 @@ scrolling:
 
     # Automatically scroll to the bottom when new text is written
     # to the terminal.
-    auto_scroll: false
+    # auto_scroll: false
 
 # Spaces per Tab
 #
@@ -58,7 +61,7 @@ scrolling:
 # Some applications, like Emacs, rely on knowing about the width of a tab.
 # To prevent unexpected behavior in these applications, it's also required to
 # change the `it` value in terminfo when altering this setting.
-tabspaces: 8
+#tabspaces: 8
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -191,7 +194,7 @@ colors:
 #
 # To completely disable the visual bell, set its duration to 0.
 #
-visual_bell:
+bell:
     animation: EaseOutExpo
     duration: 0
 
@@ -228,7 +231,6 @@ mouse:
 selection:
     semantic_escape_chars: ',│`|:"'' ()[]{}<>'
 
-dynamic_title: true
 
 hide_cursor_when_typing: false
 

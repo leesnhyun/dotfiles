@@ -5,6 +5,8 @@ if [[ -z "$LANG" ]]; then
     eval "$(locale)"
 fi
 
+echo "test"
+
 # set editors
 export VISUAL=vim
 export EDITOR="$VISUAL"

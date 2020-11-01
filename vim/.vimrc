@@ -23,9 +23,12 @@ Plug 'Yggdroot/indentLine'
 Plug 'voldikss/vim-floaterm'
 Plug 'leafgarland/typescript-vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " finish plugins
 call plug#end()
+
 
 " general settings
 filetype plugin indent on
@@ -33,6 +36,7 @@ set autoindent
 set backspace=indent,eol,start
 set clipboard^=unnamed
 set completeopt=noinsert,menuone,noselect
+set completefunc=emoji#complete
 set copyindent
 set cursorline
 set encoding=utf-8 nobomb
@@ -127,5 +131,26 @@ nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 " map nerdtree
 map <C-a> :NERDTreeToggle<CR>
 
+" cancel search
+nnoremap <silent> <Esc><Esc> :let @/=""<CR>
+
+" map difftool
+if &diff
+  nnoremap <silent> <A-Down> ]c
+  nnoremap <silent> <A-Up> [c
+endif
+
 " ale
 let b:ale_fixers = {'javascript': ['prettier', 'eslint'] }
+
+" Coc Settings {{
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+" }}
