@@ -43,10 +43,10 @@ cmd + alt - n : yabai -m space --create && \
 #                 yabai -m space --focus "${index}"
 
 # destroy desktop
+cmd + alt - up : yabai -m space --create
 cmd + alt - down : yabai -m space --destroy
 
 # fast focus desktop
-cmd + alt - up : yabai -m space --focus recent
 cmd + alt - left : yabai -m space --focus prev
 cmd + alt - right : yabai -m space --focus next
 #cmd + alt - 1 : yabai -m space --focus 1
