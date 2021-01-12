@@ -25,6 +25,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
 
 " finish plugins
 call plug#end()
@@ -139,6 +141,10 @@ if &diff
   nnoremap <silent> <A-Down> ]c
   nnoremap <silent> <A-Up> [c
 endif
+
+"key maps
+nnoremap <silent> vv <C-w>v
+nnoremap <slient> vh <C-w>h
 
 " ale
 let b:ale_fixers = {'javascript': ['prettier', 'eslint'] }

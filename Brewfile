@@ -50,6 +50,7 @@ brew "zplug"
 brew "zsh"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
+brew "gh"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk8-jre"

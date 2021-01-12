@@ -184,6 +184,9 @@ alias sed="gsed"
 # which
 alias which="gwhich"
 
+# go-jira
+alias j="jira ls --template table | fzf"
+
 # npm
 alias nin="npm init"
 alias ni="npm i"
@@ -238,6 +241,9 @@ alias get="curl -O -L"
 alias vi="vim"
 alias reload="source ~/.zshrc"
 
+# k8s
+alias k="kubectl"
+
 # use ccat
 alias cat="ccat"
 
@@ -277,6 +283,10 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # 🔇
 alias stfu="osascript -e 'set volume output muted true'"
+
+# kubectl
+alias kx="kubectx"
+
 
 # use gitignore.io cmd line tool
 gi() {
@@ -362,8 +372,10 @@ gifify() {
 
 # defaulting tree
 tree() {
-	tree -aC -I '.git|node_modules|build|dist' --dirsfirst "$@" | less -FRNX
+	command tree -aC -I '.git|node_modules|build|dist' --dirsfirst "$@" | less -FRNX
 }
+
+
 
 # 🗑
 emptytrash() {
@@ -371,5 +383,6 @@ emptytrash() {
 	sudo rm -rfv /Volumes/*/.Trashes >/dev/null
 	rm -rfv ~/.Trash/* >/dev/null
 	sudo rm -v /private/var/vm/sleepimage >/dev/null
-
 }
+
+

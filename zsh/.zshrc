@@ -27,6 +27,9 @@ antigen apply
 # set starship prompt
 eval "$(starship init zsh)"
 
+# go-jira autosuggets
+eval "$(jira --completion-script-zsh)"
+
 # set pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"

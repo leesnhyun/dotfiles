@@ -30,4 +30,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Go-jira
+.jira-prefix
+.jira-url
+
+
 # End of https://www.gitignore.io/api/macos
